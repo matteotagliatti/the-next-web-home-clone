@@ -1,0 +1,119 @@
+@font-face {font-family: Shentox; src: url(/font/shentox-medium.woff2);}
+@font-face {font-family: Graphik; src: url(/font/Graphik-Regular-Web.woff2);}
+
+/* Variabiles */
+
+$header-font-stack: Shentox, sans-serif;
+$header-text-color-active: #1f1f1f;
+$header-color: #f7f8f8;
+$header-yellow-color: #fd3;
+
+$font-stack: Graphik, sans-serif;
+
+/* Global */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-size: 100%;
+}
+
+p,
+span {
+    font-family: $font-stack;
+}
+
+a {
+    text-decoration: none;
+}
+
+/* Header */
+
+header {
+    font-family: $header-font-stack;
+    height: 3rem;
+    padding-left: 1.5rem;
+    padding-right: 1.5rem;
+    display: flex;
+    justify-content: space-between;
+    background-color: $header-color;
+    box-shadow: 0 0 48px rgba(0,0,0,.15);
+    
+    .logo {
+        width: 4.125rem;
+        padding-top: 1rem;
+        padding-bottom: 1rem;
+    }
+
+    .email-icon {
+        width: 20px;
+        padding-top: 0.8rem;
+        padding-bottom: 0.8rem;
+    }
+
+    nav {
+        display: flex;
+
+        %background-hover-active {
+            background-color: white;
+        }
+
+        %text-hover-active {
+            color: $header-text-color-active;
+        }
+
+        div {
+            height: 3rem;
+            padding-left: 1rem;
+            padding-right: 1rem;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            &:hover {
+                @extend %background-hover-active;
+            }
+            &.active {
+                @extend %background-hover-active;
+            }
+
+            a {
+                font-size: .875rem;
+                text-transform: uppercase;
+                letter-spacing: .08em;
+                color: #505666;
+                &:hover {
+                    @extend %text-hover-active;
+                }
+                &.active {
+                    @extend %text-hover-active;
+                }
+                &.arrow-down::after {
+                    position: relative;
+                    float: right;
+                    margin-left: 0.5rem;
+                    height: 0.75rem;
+                    width: 0.75rem;
+                    background-image: url(data:image/svg+xml;charset=utf-8;base64,PHN2ZyB4bWxucz0naHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmcnIHZpZXdCb3g9JzAgMCAxMiAxMic+PHBhdGggZmlsbD0nbm9uZScgc3Ryb2tlPScjQTdBQUIyJyBkPSdNMTEuNSAzLjVMNiA5IC41IDMuNScvPjwvc3ZnPg==);
+                    content: "";
+                }
+            }
+        }
+    }
+}
+
+/* Sub-Header */
+
+.sub-header {
+    padding: 0.7rem 0 0.7rem 1.5rem;
+    background-color: $header-yellow-color;
+    box-shadow: 0 16px 48px rgba(0,0,0,.15);
+
+    span {
+        font-size: 13px;
+
+        &::after {
+            content: " →";
+        }
+    }
+}

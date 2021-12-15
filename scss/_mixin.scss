@@ -10,3 +10,16 @@
     background-image: url($image);
     background-size: cover;
 }
+
+@mixin article-mobile ($grid-row, $grid-column) {
+    grid-row: $grid-row;
+    grid-column: $grid-column;
+}
+
+@mixin tablet-breakpoint {
+    @media (max-width: $tablet-breakpoint) { @content; }
+}
+
+@mixin mobile-breakpoint {
+    @media (max-width: $mobile-breakpoint) { @content; }
+}

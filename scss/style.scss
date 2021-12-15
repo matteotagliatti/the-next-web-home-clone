@@ -206,7 +206,7 @@ header {
     }
 
     .article1 {
-        @include article(1/span 3, '/img/article/article1.jpeg');
+        @include article(1/span 3, 'img/article/article1.jpeg');
         grid-column: 1 / 5;
         @include mobile-breakpoint {
             @include article-mobile(1, 1);
@@ -214,7 +214,7 @@ header {
     }
 
     .article2 {
-        @include article(1/span 2, '/img/article/article2.jpeg');
+        @include article(1/span 2, 'img/article/article2.jpeg');
         grid-column: 5/7;
         @include mobile-breakpoint {
             @include article-mobile(2, 1);
@@ -222,7 +222,7 @@ header {
     }
 
     .article3 {
-        @include article(1/span 2, '/img/article/article3.jpeg');
+        @include article(1/span 2, 'img/article/article3.jpeg');
         grid-column: 7/9;
         @include mobile-breakpoint {
             @include article-mobile(3, 1);
@@ -230,7 +230,7 @@ header {
     }
 
     .article4 {
-        @include article(4/span 2, '/img/article/article5.jpeg');
+        @include article(4/span 2, 'img/article/article5.jpeg');
         grid-column: 1/5;
         @include mobile-breakpoint {
             @include article-mobile(4/5, 1);
@@ -238,7 +238,7 @@ header {
     }
 
     .article5 {
-        @include article(3/span 3, '/img/article/article4.jpeg');
+        @include article(3/span 3, 'img/article/article4.jpeg');
         grid-column: 5/9;
         @include mobile-breakpoint {
             @include article-mobile(6, 1);
@@ -386,7 +386,7 @@ header {
     padding: 4rem;
     @include flex (column, center, center);
     color: white;
-    background-image: url('/img/spacesbg.png');
+    background-image: url('img/spacesbg.png');
     background-size: cover;
     background-attachment: fixed;
     background-position: 50%;
